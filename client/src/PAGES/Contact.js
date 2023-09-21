@@ -10,7 +10,7 @@ const Contact = () => {
         <label for="email"> Email: </label>              
         <input id="email" type="email" placeholder="Email"/><br/>             
         <textarea placeholder="Message"></textarea><br/>
-        <button value="SEND">SEND</button>
+        <button value="SEND">SEND - &gt;</button>
       </form>
    </section>
  </div> );

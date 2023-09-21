@@ -1,7 +1,4 @@
 
-import img from "../images/main.jpg";
-
-
 const HomeSection1 = () => {
   return (
     <>
@@ -23,7 +20,7 @@ const HomeSection1 = () => {
 
           
         </div>
-        <img src={img} alt="MainPictue" className="section1Img"></img>
+        <img src="/images/main.jpg" alt="MainPictue" className="section1Img"></img>
       </div>
     </>
   );

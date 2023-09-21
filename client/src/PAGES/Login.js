@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "../CSS/Login.css";
-import signup from "../images/sign-up.jpeg";
 import {NavLink} from "react-router-dom";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,7 +8,7 @@ const Login = () => {
     <div className="loginContainer">
       <div className="loginSection1">
         <div className="leftHalf">
-          <img src={signup} alt="loginpicture"></img>
+          <img src="images/sign-up.jpeg" alt="loginpicture"></img>
         </div>
         <div className="rightHalf">
           <form>

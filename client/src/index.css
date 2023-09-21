@@ -32,33 +32,28 @@ html,body{
 .TitleLogo span{
     font-size: 34px;
     font-family: 'Montserrat', sans-serif;
-    margin: 0px 10px 0px 20px;
-}
-.TitleLogo a{
-    color: var(--linkText);
 }
 .Nav-links ul{
     display: flex;
+    gap: 50px;
 }
 .Nav-links ul li a{
-    margin: 50px;
     color: var(--linkText);
     font-family: 'Rajdhani', sans-serif;
     font-size: 25px;
 }
+
 .Nav-links ul li a:hover{
-    animation: borderInc 1s;
+    animation: borderInc 0.5s;
     animation-fill-mode: forwards;
 }
-
-
 
 @keyframes borderInc {
     from{
         border-bottom: 0px;
     }to{
         color: white;
-        border-bottom: 1px solid black;
+        border-bottom: 3px solid black;
     }
 }
 
@@ -73,38 +68,35 @@ html,body{
 
 /*HOME-PAGE STYLES*/
 
-
 .homeContainer{
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    margin: 100px 50px;
 }
 .homeSection1{
     display: flex;
-    padding: 50px;
-    border-radius: 30px;
 }
 
-.homeTextWrapper pre{
+.homeTextWrapper > pre{
     font-family: 'Dancing Script', cursive;
     font-size: 60px;
 }
 .homeTextWrapper{
     display: flex;
     flex-direction:column;
-    justify-content: space-evenly;
-    align-items: flex-start;
+    justify-content: center;
 }
-.homeTextWrapper p{
+.homeTextWrapper > p{
     font-family: 'Cedarville Cursive', cursive;
     line-height: 30px;
     word-spacing: 7px;
     font-size: 24px;
 }
 
-
 .section1Img{
     border-radius:35px;
     width: 700px;
-    margin: 40px;
     filter: grayscale(1);
 }
 
@@ -112,131 +104,119 @@ html,body{
 .homeSection1:hover .section1Img{
     filter: grayscale(0);
 }
+
 .homeSection2{
-    margin-top:50px;
-    border-radius: 30px;
-    height: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 0px 140px 0px;
+}
+
+.hs2wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.hs2imgWrapper{
     position: relative;
 }
 
 .booksPic{
     position: absolute;
+    top:280px;
+    left: -200px;
     width: 500px;
-    right: 200px;
-    top: 100px;
+    height: 350px;
+    object-fit: cover;
     z-index: 2;
+    border-radius: 2px;
 }
 .readPic{
-    width:400px;
-    height: 400px;
-    object-fit: contain;
     position: absolute;
-    top:300px;
-    right: 500px;
+    bottom: -60px;
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    right: -120px;
     z-index: 1;
+    border-radius: 2px;
 }
 .quote1{
-    position: absolute;
-    top: 400px;
-    left: 20px;
     font-size: 25px;
 }
+
+.aboutDescription {
+    width: 500px;
+    height:450px;
+    background-color: black;
+    color: var(--text);
+    padding: 30px;
+}
+.aboutDescription h2{
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 2px;
+    border-bottom: 4px solid white;
+}
+.aboutDescription p {
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 20px;
+    word-spacing: 10px;
+}
+
+
 .exploreButton{
     width: 200px;
     background-color: transparent;
     padding: 20px;
     font-size:15px;
     height: 70px;
-    margin-top: 20px;
-    position: absolute;
-    top: 470px;
-    left: 200px;
+    transition: all 2s;
+    transform-origin: left;
 }
 
 .exploreButton:hover{
-    animation: widthIncrease 3s;
-    cursor: pointer;
-}
-
-@keyframes widthIncrease {
-    from{
-     width: 200px;
-     font-size: 15px;
-    }to{
-        width: 300px;
-        font-size: 25px;
-    }
-}
-
-.aboutDescription {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-left: 100px;
-    padding-right:40px;
-    padding-bottom:70px;
-    width: 500px;
-    height:500px;
-    border-radius: 10px;
-    background-color: black;
-    color: var(--text);
-    position: absolute;
-    right: 50px;
-    bottom: 30px;
-}
-
-
-.aboutDescription h2{
-    font-family: 'Rajdhani', sans-serif;
-    letter-spacing: 2px;
-    border-bottom: 4px solid white;
-    padding: 5px;
-}
-
-
-.aboutDescription p {
-    font-family: 'Cedarville Cursive', cursive;
-    font-size: 20px;
-    word-spacing: 10px;
-    margin-top: 10px;
+   transform: scaleX(1.5);
 }
 
 .homeSection3{
-    height:800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hs3imgWrapper{
     position: relative;
 }
-
 .homeSection3 pre{
-    position: absolute;
-    right:80px;
-    top: 400px; 
     font-size: 25px;
 }
 .sec3Book{
-    width: 800px;
-    height: 500px;
-    position: absolute;
-    top: 150px;
-    left: 150px;
+    width: 1000px;
+    height: 700px;
     filter: blur(8px);
 }
 
 .sec3Kindle{
-    width: 340px;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
     position: absolute;
-    bottom: 250px;
-    left: 400px;
-    border-radius: 10px ;
+    top: 0px;
+    left: 0px;
+    transform: translate(100%,100%);
 }
-
+.hs3TextWrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 20px;
+}
 .loginButton{
     width: 100px;
     background-color: transparent;
     font-size:15px;
-    height: 40px;
-    position: absolute;
-    right: 270px;
-    bottom: 300px;
+    padding: 10px;
 }
 
 .loginButton:hover{
@@ -257,12 +237,13 @@ html,body{
 }
 
 .homeSection4{
-    height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
+
 .homeSection4 pre{
     font-size: 24px;
 }
@@ -270,7 +251,7 @@ html,body{
     width: 100px;
     background-color: transparent;
     font-size:15px;
-    height: 40px;
+    padding: 5px 10px;
 }
 
 .contactButton:hover{
@@ -282,12 +263,13 @@ html,body{
 /*FOOTER-STYLES*/
 
 .Footer{
-    height: 250px;
     background-color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
 }
 .footerLinks ul{
     display: flex;
@@ -369,6 +351,37 @@ html,body{
     border: none;
     background-color: transparent;
     border-bottom: 2px solid black;
+}
+
+.contactForm form textarea{
+    width: 400px;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid black;
+}
+
+.contactForm form button{
+  width: 100px;
+  background-color: black;
+  font-family: cursive;
+  color: white;
+  outline: transparent;
+  border: 5px solid white;
+  border-radius: 20px;
+  font-size: 15px;
+  height: 40px;
+}
+
+
+.decoration{
+  color: transparent;
+  background-clip: text;
+  background-image: url("../public/images/top.webp");
+  background-position: 150px;
+  font-size: 70px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 @media screen  and (max-width:960px){
